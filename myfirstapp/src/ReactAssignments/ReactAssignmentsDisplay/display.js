@@ -1,5 +1,11 @@
 import React from "react";
 import WelcomePage from "../ReactJS-Task-1/index";
+import Timetable from "../ReactJS-Task-2/index";
+import Main from "../ReactJS-Task-4/index";
+import Home from "../ReactJS-Task-5/Home";
+import Homee from "../ReactJS-Task-6/Homee";
+import Counter from "../ReactJS-Task-7/Counter";
+import FormComponent from "../React-FormEvents/formevents";
 
 function Display() {
   return (
@@ -10,6 +16,36 @@ function Display() {
         <WelcomePage />
       </div>
 
+      <div style={{ border: "2px solid black", padding: "20px" }}>
+        <center><h1>Task-2 : TimeTable</h1></center><br/>
+        <Timetable />
+      </div>
+
+      <div style={{ border: "2px solid black", padding: "20px" }}>
+        <center><h1>Task-4 : Display Images in UI</h1></center><br/>
+        <Main />
+      </div>
+
+      <div style={{ border: "2px solid black", padding: "20px" }}>
+        <center><h1>Task-5 : Accordian</h1></center><br/>
+        <Home />
+      </div>
+
+      <div style={{ border: "2px solid black", padding: "20px" }}>
+        <center><h1>Task-6 : Table</h1></center><br/>
+        <Homee />
+      </div>
+
+      <div style={{ border: "2px solid black", padding: "20px" }}>
+        <center><h1>Task-7 : Counter</h1></center><br/>
+        <Counter />
+      </div>
+
+      <div style={{ border: "2px solid black", padding: "20px" }}>
+        <center><h1>Task : Form-Events</h1></center><br/>
+        <FormComponent />
+      </div>
+      
     </div>
   );
 }
