@@ -16,9 +16,9 @@ class EvenOdd extends Component {
     const { number } = this.state;
 
     if (number % 2 === 0) {
-      this.setState({ result: `The number ${number} is Even.` });
+      this.setState({ result: ` ${number} is a Even Number.` });
     } else if (number % 2 === 1) {
-      this.setState({ result: `The number ${number} is Odd.` });
+      this.setState({ result: ` ${number} is Odd Number.` });
     } else {
       this.setState({ result: "Please enter a valid number." });
     }

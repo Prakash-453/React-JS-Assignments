@@ -8,6 +8,7 @@ import Homee from "../ReactJS-Task-6/Homee";
 import Counter from "../ReactJS-Task-7/Counter";
 import Form from "../ReactJS-Task-8/Form"
 import EvenOdd from "../ReactJS-Task-9/index";
+import ToDo from "../ReactJS-Task-10/ToDo";
 import FormComponent from "../React-FormEvents/formevents";
 
 function Display() {
@@ -57,6 +58,11 @@ function Display() {
       <div style={{ border: "2px solid black", padding: "20px" }}>
         <center><h1>Task-9 : Whether Input is Even or ODD using Class Component</h1></center><br/>
         <EvenOdd/>
+      </div>
+ 
+      <div style={{ border: "2px solid black", padding: "20px" }}>
+        <center><h1>Task-10 : Implement Delete Feature in ToDo List application</h1></center><br/>
+        <ToDo/>
       </div>
 
       <div style={{ border: "2px solid black", padding: "20px" }}>
