@@ -1,20 +1,21 @@
 import React from "react";
 import WelcomePage from "../ReactJS-Task-1/index";
 import Timetable from "../ReactJS-Task-2/index";
-import HomePage from "../ReactJS-Task-3/HomePage/HomePage"
+import HomePage from "../ReactJS-Task-3/HomePage/HomePage";
 import Main from "../ReactJS-Task-4/index";
 import Home from "../ReactJS-Task-5/Home";
 import Homee from "../ReactJS-Task-6/Homee";
 import Counter from "../ReactJS-Task-7/Counter";
-import Form from "../ReactJS-Task-8/Form"
+import Form from "../ReactJS-Task-8/Form";
 import EvenOdd from "../ReactJS-Task-9/index";
 import ToDo from "../ReactJS-Task-10/ToDo";
+import DataLoading from "../ReactJS-Task-11/index";
+import Updating from "../ReactJS-Task-12";
 import FormComponent from "../React-FormEvents/formevents";
 
 function Display() {
   return (
     <div>
-
       <div style={{ border: "2px solid black", padding: "20px" }}>
         <center><h1>Task-1 : Simple Welcome Page</h1></center><br/>
         <WelcomePage />
@@ -66,10 +67,20 @@ function Display() {
       </div>
 
       <div style={{ border: "2px solid black", padding: "20px" }}>
+        <center><h1>Task-11 : Add spinner if data is not Loaded yet
+        </h1></center><br/>
+        <DataLoading/>
+      </div>
+
+      <div style={{ border: "2px solid black", padding: "20px" }}>
+        <center><h1>Task-12 : Show the Card as per the Button Value.</h1></center><br/>
+        <Updating/>
+      </div>
+
+      <div style={{ border: "2px solid black", padding: "20px" }}>
         <center><h1>Task : Form-Events</h1></center><br/>
         <FormComponent />
       </div>
-      
     </div>
   );
 }

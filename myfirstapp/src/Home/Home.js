@@ -4,13 +4,13 @@ import React from "react";
 // import NotificationCard from "../Day-5/Notifications/NotificationsCard";
 // import ProductCard from "../Day-5/Products/ProductCard";
 
-// import ProfileCard from "../Day-6/Profile/ProfileCard";
+import ProfileCard from "../Day-6/Profile/ProfileCard";
 // import NotificationCard from "../Day-6/Notifications/NotificationsCard";
 // import ProductCard from "../Day-6/Products/ProductCard";
 
 // import Accordion from "../Day-6/Accordian/Accordian";
 
-import BasicExample from "../Day-6/Table/Table";
+// import BasicExample from "../Day-6/Table/Table";
 
 const products = [
   {
@@ -281,54 +281,54 @@ const products = [
   },
 ];
 
-// function Home() {
-//   return (
-//     <div
-//       style={{
-//         display: "flex",
-//         flexWrap: "wrap",
-//         gap: "20px",
-//         justifyContent: "center",
-//         alignItems: "center",
-//       }}
-//     >
-//       {/* <ProfileCard Name="Prakash" City="Hyderabad" Role="Developer" />
+function Home() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "20px",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {/* <ProfileCard Name="Prakash" City="Hyderabad" Role="Developer" />
 // //       <ProfileCard Name="Rohit" City="Mumbai" Role="Cricketer" />
 // //       <ProfileCard Name="Ravi" City="Bangalore" Role="Influencer" />
 // //       <NotificationCard Name="Ram" Type="Liked" />
 // //       <NotificationCard Name="Praveen" Type="Commented" />
 // //       <NotificationCard Name="Eswar" Type="Shared" />
 // //       <NotificationCard Name="Bumrah" Type="Saved" /> */}
-//       {/* <ProductCard>
+          {/* <ProductCard>
 // //         <h1>Mobile</h1>
 // //         <p>RedMi</p>
 // //         <h1>Laptop</h1>
 // //         <p>ThinkPad</p>
 // //       </ProductCard> */}
-//       {/* <ProfileCard Title="React" Description="It is JavaScript React Library" Info="Click Here"/> */}
-//       {/* <ProfileCard
+      {/* <ProfileCard Title="React" Description="It is JavaScript React Library" Info="Click Here"/> */}
+      {/* <ProfileCard
 //         title={products[0].title}
 //          description={products[0].description}
 //          category={products[0].category}
 //          image={products[0].image}
 //       /> */}
-//       {products.map((a, b) => {
-//         return (
-//           <div key={b}>
-//             <ProfileCard
-//               title={a.title}
-//               description={a.description}
-//               category={a.category}
-//               image={a.image}
-//             />
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// }
+      {products.map((a, b) => {
+        return (
+          <div key={b}>
+            <ProfileCard
+              title={a.title}
+              description={a.description}
+              category={a.category}
+              image={a.image}
+            />
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
-// export default Home;
+export default Home;
 
 // function Home()
 // {
@@ -343,16 +343,16 @@ const products = [
 
 // export default Home
 
-function Home()
-{
-  return(
-    <div>
-      {/* {products.map((a,b)=>{return(
-        <BasicExample title={a.title} description={a.description} image={a.image} id={a.id}/>
-      )})} */}
-      <BasicExample products={products} />
-    </div>
-  )
-}
+// function Home()
+// {
+//   return(
+//     <div>
+//       {/* {products.map((a,b)=>{return(
+//         <BasicExample title={a.title} description={a.description} image={a.image} id={a.id}/>
+//       )})} */}
+//       <BasicExample products={products} />
+//     </div>
+//   )
+// }
 
-export default Home
+// export default Home
