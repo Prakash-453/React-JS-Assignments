@@ -10,8 +10,9 @@ import Form from "../ReactJS-Task-8/Form";
 import EvenOdd from "../ReactJS-Task-9/index";
 import ToDo from "../ReactJS-Task-10/ToDo";
 import DataLoading from "../ReactJS-Task-11/index";
-import Updating from "../ReactJS-Task-12";
-import FormComponent from "../React-FormEvents/formevents";
+import ButtonCard from "../ReactJS-Task-12/index";
+import Counterr from "../ReactJS-Task-13/Counter";
+import FormComponent from "../ReactJS-Task-14/formevents";
 
 function Display() {
   return (
@@ -74,11 +75,16 @@ function Display() {
 
       <div style={{ border: "2px solid black", padding: "20px" }}>
         <center><h1>Task-12 : Show the Card as per the Button Value.</h1></center><br/>
-        <Updating/>
+        <ButtonCard/>
       </div>
 
       <div style={{ border: "2px solid black", padding: "20px" }}>
-        <center><h1>Task : Form-Events</h1></center><br/>
+        <center><h1>Task-13 : Counter Application using Functional Component</h1></center><br/>
+        <Counterr />
+      </div>
+
+      <div style={{ border: "2px solid black", padding: "20px" }}>
+        <center><h1>Task-14 : Upload Image in the form Show the FormData in the Modal</h1></center><br/>
         <FormComponent />
       </div>
     </div>

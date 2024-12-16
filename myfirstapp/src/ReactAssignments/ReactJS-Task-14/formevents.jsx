@@ -15,10 +15,8 @@ function FormComponent() {
 
   const handleImageInput = (e) => {
     const file = e.target.files[0];
-    console.log(file)
     if (file) {
       const imageUrl = URL.createObjectURL(file);
-      // console.log(imageUrl,"URLLLL")
       setformData((a) => ({
         ...a,
         img: imageUrl,
@@ -32,18 +30,28 @@ function FormComponent() {
   };
 
   return (
-    <div style={{display:"flex",flexDirection:"column",width:"500px",height:"700px"}}>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="user" value={formData.user} onChange={handleInput} placeholder="Name"/><br/><br/>
-        <input type="tel" name="mobile" value={formData.mobile} onChange={handleInput} placeholder="Mobile"/><br/><br/>
-        <input type="email" name="email" value={formData.email} onChange={handleInput} placeholder="Email"/><br/><br/>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#f8f9fa", 
+      }}
+    >
+      <form onSubmit={handleSubmit}style={{display: "flex",flexDirection: "column",alignItems: "center",}}>
 
-        {formData.img && <img src={formData.img} alt="Preview" hidden/>}
-        <input type="file" name="img" onChange={handleImageInput} /><br/><br/>
+        <input type="text" name="user" value={formData.user} onChange={handleInput} placeholder="Name"/><br/>
 
-        <input type="submit" value="Submit" />
+        <input type="tel" name="mobile" value={formData.mobile} onChange={handleInput} placeholder="Mobile"/><br/>
 
+        <input type="email" name="email" value={formData.email} onChange={handleInput} placeholder="Email"/><br/>
+
+        {formData.img && (<img src={formData.img} alt="Preview" hidden/>)}
+        <input type="file" name="img" onChange={handleImageInput} style={{marginLeft:"100px"}}/><br/>
+
+        <input type="submit" value="Submit"/>
       </form>
+
       <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}
@@ -57,6 +65,4 @@ function FormComponent() {
 }
 
 export default FormComponent;
-
-
 
