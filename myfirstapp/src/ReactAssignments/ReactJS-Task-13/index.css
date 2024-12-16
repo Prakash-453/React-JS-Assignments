@@ -13,7 +13,7 @@
     margin-top: 10px;
   }
   
-  .btn {
+  .button-container .btn {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -26,15 +26,15 @@
     text-align: center;
   }
   
-  .btn:hover {
+  .button-container .btn:hover {
     background-color: #0056b3;
   }
   
-  .btn:focus {
+  .button-container .btn:focus {
     outline: none;
   }
   
-  .btn:active {
+  .button-container .btn:active {
     transform: scale(0.95);
   }
   

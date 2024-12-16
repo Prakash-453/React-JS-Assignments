@@ -7,7 +7,7 @@ function ProfileCard(props) {
   return (
     <div>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={props.image} style={{height:"130px"}} />
+        <Card.Img variant="top" src={props.image} style={{height:"150px"}} />
         <Card.Body style={{ height: "150px", overflowY: "scroll" }}>
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>{props.description}</Card.Text>
