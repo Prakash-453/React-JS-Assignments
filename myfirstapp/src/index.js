@@ -29,16 +29,16 @@ import reportWebVitals from './reportWebVitals';
 
 // import ParentComponent from './ContextAPI/ParentComponent';
 
-// import App from './FireBaseAuthentication/App';
+import App from './FireBaseAuthentication/App';
 
-import Circle from './Circles/index';
+// import Circle from './Circles/index';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <ParentComponent/> */}
-    {/* <App /> */}
-    <Circle/>
+    <App />
+    {/* <Circle/> */}
     {/* <Sample/>*/}
      {/* <Timetable/> */}
     {/* <Home/> */}
