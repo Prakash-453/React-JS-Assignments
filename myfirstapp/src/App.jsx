@@ -92,14 +92,14 @@ import "./App.css";
 
 
 
-// import Display from "./ReactAssignments/ReactAssignmentsDisplay/display";
+import Display from "./ReactAssignments/ReactAssignmentsDisplay/display";
 
-// function App() {
-//   return (
-//     <div>
-//       <Display />
-//     </div>
-//   );
-// }
+function App() {
+  return (
+    <div>
+      <Display />
+    </div>
+  );
+}
 
-// export default App;
+export default App;
