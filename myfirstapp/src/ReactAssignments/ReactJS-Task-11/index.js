@@ -6,20 +6,19 @@ import axios from "axios";
 class DataLoading extends Component {
   constructor() {
     super();
-    this.state = { products: [], Loading: true };
+    this.state = { products: [] };
   }
 
   componentDidMount() {
     axios.get("https://fakestoreapi.com/products").then((res) => {
       this.setState({
         products: res.data,
-        Loading: false,
       });
     });
   }
 
   render() {
-    const { products, Loading } = this.state;
+    const { products } = this.state;
     return (
       <div>
         <div
@@ -30,9 +29,7 @@ class DataLoading extends Component {
             gap: "20px",
           }}
         >
-          {Loading ? (
-            <Spinnerr />
-          ) : (
+          {products.length > 0 ? (
             products.map((a, b) => {
               return (
                 <ProfileCard
@@ -43,6 +40,8 @@ class DataLoading extends Component {
                 />
               );
             })
+          ) : (
+            <Spinnerr />
           )}
         </div>
       </div>

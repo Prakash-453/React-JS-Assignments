@@ -52,18 +52,10 @@ class ToDo extends Component {
         </form>
         <ul className="todo-list">
           {this.state.list.map((a, b) => (
-            <li key={b} className="todo-item">
-              {a}
+            <li key={b} className="todo-item">{a}
               <div className="todo-actions">
-                <button onClick={() => this.handleEdit(b)} className="todo-edit">
-                  Edit
-                </button>
-                <button
-                  onClick={() => this.handleDelete(b)}
-                  className="todo-delete"
-                >
-                  Delete
-                </button>
+                <button onClick={() => this.handleEdit(b)} className="todo-edit">Edit</button>
+                <button onClick={() => this.handleDelete(b)} className="todo-delete">Delete</button>
               </div>
             </li>
           ))}

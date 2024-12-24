@@ -8,7 +8,7 @@ class EvenOdd extends Component {
 
   handleInput = (e) => {
     const num = e.target.value;
-    this.setState({ number: num ? parseInt(num) : "" });
+    this.setState({ number: num });
   };
 
   handleEvenOdd = (event) => {

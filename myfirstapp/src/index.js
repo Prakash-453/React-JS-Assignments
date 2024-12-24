@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import App from './App';
+//import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import Sample from './Class1'
 // import Timetable from './TimeTable';
@@ -27,12 +27,18 @@ import reportWebVitals from './reportWebVitals';
 // Day-10
 // import ToDo from './Day-10/ToDoList/Todo';
 
+// import ParentComponent from './ContextAPI/ParentComponent';
 
+// import App from './FireBaseAuthentication/App';
+
+import Circle from './Circles/index';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <ParentComponent/> */}
+    {/* <App /> */}
+    <Circle/>
     {/* <Sample/>*/}
      {/* <Timetable/> */}
     {/* <Home/> */}
