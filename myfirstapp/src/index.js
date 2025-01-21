@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//import App from "./Project/project"
 // import Sample from './Class1'
 // import Timetable from './TimeTable';
 // import Home from './Home/Home';
@@ -56,6 +57,7 @@ root.render(
     {/* <SampleForm/> */}
 
     {/* <ToDo/> */}
+
   </React.StrictMode>
 );
 

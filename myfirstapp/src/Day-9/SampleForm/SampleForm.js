@@ -14,6 +14,7 @@ class SampleForm extends Component
     handleSubmit=(e)=>{
         e.preventDefault()
         this.setState({output:this.state.fname+this.state.sname})
+        
     }
     render()
     {
