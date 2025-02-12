@@ -1,34 +1,37 @@
 import { useState } from "react";
 
-export default function CircleApp() {
-  const [circles, setCircles] = useState([]);
-  const [bgColor, setBgColor] = useState("white");
+function RandomCircle() {
+  const [circle, setCircle] = useState([]);
+  const [color, setColor] = useState("white");
 
-  const handleClick = (e) => {
-    const radius = Math.floor(Math.random() * (200 - 20 + 1)) + 20;
-    console.log(radius)
-    const newCircle = { x: e.clientX, y: e.clientY, radius };
-    console.log(newCircle)
+  function handleClick(e) {
+    const { clientX, clientY } = e;
+    const radius = Math.floor(Math.random() * 181) + 20;
+    const newCircle = { x: clientX, y: clientY, radius };
 
-    let newCircles = [...circles, newCircle];
+    let newCircles = [...circle, newCircle];
+
     if (newCircles.length > 2) {
-      newCircles = [];
+      newCircles = []
     }
-    setCircles(newCircles);
+
+    setCircle(newCircles);
     checkIntersection(newCircles);
-  };
+  }
 
   const checkIntersection = (circles) => {
     if (circles.length < 2) {
-      setBgColor("white");
+      setColor("white");
       return;
     }
+
     const [c1, c2] = circles;
     const distance = Math.sqrt((c2.x - c1.x) ** 2 + (c2.y - c1.y) ** 2);
+
     if (distance < c1.radius + c2.radius) {
-      setBgColor("red");
+      setColor("green");
     } else {
-      setBgColor("white");
+      setColor("white");
     }
   };
 
@@ -38,19 +41,19 @@ export default function CircleApp() {
       style={{
         width: "100vw",
         height: "100vh",
-        backgroundColor: bgColor,
+        backgroundColor: color,
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {circles.map((circle, index) => (
+      {circle.map((circle, index) => (
         <div
           key={index}
           style={{
             width: circle.radius * 2,
             height: circle.radius * 2,
             borderRadius: "50%",
-            backgroundColor: "blue",
+            backgroundColor: "aqua",
             position: "absolute",
             left: circle.x - circle.radius,
             top: circle.y - circle.radius,
@@ -60,3 +63,5 @@ export default function CircleApp() {
     </div>
   );
 }
+
+export default RandomCircle;

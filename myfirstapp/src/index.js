@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-import App from "./App";
+// import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 //import App from "./Project/project"
 // import Sample from './Class1'
@@ -32,7 +32,8 @@ import reportWebVitals from "./reportWebVitals";
 
 // import App from './FireBaseAuthentication/App';
 
-import Circle from './Circles/index';
+// import Circle from './Circles/index';
+// import HelloCircle from "./Circles/indexx";
 
 
 // import Todo from "./ReactTasks/ToDo"; 
@@ -42,7 +43,7 @@ import Circle from './Circles/index';
 
 // import MovieList from "./Movies";
 
-
+import RandomCircle from "./RandomCircles/RandomCircles";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -62,7 +63,7 @@ root.render(
     {/* <Parent Login="Admin"/> */}
     {/* <Counter/> */}
 
-   <Circle/>
+   <RandomCircle/>
 
     {/* <ToggleSwitch/> */}
     {/* <Form/> */}
