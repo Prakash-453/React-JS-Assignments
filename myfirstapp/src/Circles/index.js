@@ -1,49 +1,32 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 
-const Circle = () => {
+export default function CircleApp() {
   const [circles, setCircles] = useState([]);
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [bgColor, setBgColor] = useState("white");
 
-  const getRandomValue = (max) => Math.floor(Math.random() * max);
-  const getRandomRadius = () => Math.floor(Math.random() * (200 - 20 + 1)) + 20;
-
-  const handleClick = () => {
-    const randomRadius = getRandomRadius();
-    const randomX = getRandomValue(window.innerWidth - randomRadius * 2);
-    const randomY = getRandomValue(window.innerHeight - randomRadius * 2);
-
-    const newCircle = {
-      x: randomX,
-      y: randomY,
-      radius: randomRadius,
-    };
-
-    const updatedCircles = [...circles, newCircle];
-
-    if (updatedCircles.length > 2) {
-      setCircles([]);
-      setIsIntersecting(false);
-    } else {
-      setCircles(updatedCircles);
-      checkIntersection(updatedCircles);
+  const handleClick = (e) => {
+    const radius = Math.floor(Math.random() * (200 - 20 + 1)) + 20;
+    const newCircle = { x: e.clientX, y: e.clientY, radius };
+    
+    let newCircles = [...circles, newCircle];
+    if (newCircles.length > 2) {
+      newCircles = [];
     }
+    setCircles(newCircles);
+    checkIntersection(newCircles);
   };
 
   const checkIntersection = (circles) => {
     if (circles.length < 2) {
-      setIsIntersecting(false);
+      setBgColor("white");
       return;
     }
-
-    const [circle1, circle2] = circles;
-    const distance = Math.sqrt(
-      Math.pow(circle1.x - circle2.x, 2) + Math.pow(circle1.y - circle2.y, 2)
-    );
-
-    if (distance < circle1.radius + circle2.radius) {
-      setIsIntersecting(true);
+    const [c1, c2] = circles;
+    const distance = Math.sqrt((c2.x - c1.x) ** 2 + (c2.y - c1.y) ** 2);
+    if (distance < c1.radius + c2.radius) {
+      setBgColor("red");
     } else {
-      setIsIntersecting(false);
+      setBgColor("white");
     }
   };
 
@@ -51,28 +34,27 @@ const Circle = () => {
     <div
       onClick={handleClick}
       style={{
-        backgroundColor: isIntersecting ? 'red' : 'white',
-        height: '100vh',
-        width: '100vw',
-        position: 'relative',
+        width: "100vw",
+        height: "100vh",
+        backgroundColor: bgColor,
+        position: "relative",
+        overflow: "hidden",
       }}
     >
       {circles.map((circle, index) => (
         <div
           key={index}
           style={{
-            position: 'absolute',
-            top: circle.y,
-            left: circle.x,
             width: circle.radius * 2,
             height: circle.radius * 2,
-            borderRadius: '50%',
-            backgroundColor: 'green',
+            borderRadius: "50%",
+            backgroundColor: "blue",
+            position: "absolute",
+            left: circle.x - circle.radius,
+            top: circle.y - circle.radius,
           }}
         ></div>
       ))}
     </div>
   );
-};
-
-export default Circle;
+}

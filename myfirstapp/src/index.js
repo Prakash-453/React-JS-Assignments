@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 //import App from "./Project/project"
 // import Sample from './Class1'
 // import Timetable from './TimeTable';
@@ -26,22 +26,33 @@ import reportWebVitals from './reportWebVitals';
 // import SampleForm from './Day-9/SampleForm/SampleForm';
 
 // Day-10
-// import ToDo from './Day-10/ToDoList/Todo';
+// import Todo from './Day-10/ToDoList/Todo';
 
 // import ParentComponent from './ContextAPI/ParentComponent';
 
 // import App from './FireBaseAuthentication/App';
 
-// import Circle from './Circles/index';
+import Circle from './Circles/index';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// import Todo from "./ReactTasks/ToDo"; 
+// import Todoo from "./ReactTasks/ToDoo";
+
+// import WeatherApp from "./Weather";
+
+// import MovieList from "./Movies";
+
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    {/* <MovieList/> */}
     {/* <ParentComponent/> */}
-    <App />
+    {/* <App /> */}
     {/* <Circle/> */}
     {/* <Sample/>*/}
-     {/* <Timetable/> */}
+    {/* <Timetable/> */}
     {/* <Home/> */}
     {/* <Main/>  */}
     {/* <BasicExample/> */}
@@ -51,12 +62,17 @@ root.render(
     {/* <Parent Login="Admin"/> */}
     {/* <Counter/> */}
 
+   <Circle/>
+
     {/* <ToggleSwitch/> */}
     {/* <Form/> */}
 
     {/* <SampleForm/> */}
 
-    {/* <ToDo/> */}
+  
+    {/* <Todoo/> */}
+
+    {/* <WeatherApp/> */}
 
   </React.StrictMode>
 );

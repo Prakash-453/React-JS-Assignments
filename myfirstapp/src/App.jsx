@@ -27,8 +27,8 @@ import "./App.css";
 // import PageNotFound from "./FunctionalComponents/RoutingComponents/PagenotFound";
 // import LoginForm from "./FunctionalComponents/LoginForm/loginform";
 // import Welcome from "./FunctionalComponents/RoutingComponents/Welcome";
-// import { Link, BrowserRouter as Router,Routes,Route } from "react-router-dom";
 
+// Static Routing
 // function App() {
 //   return (
 //     <div>
@@ -56,50 +56,43 @@ import "./App.css";
 // }
 // export default App;
 
-// function App() {
-//   return (
-//     <center>
-//       <h1 className="app">Welcome to React App</h1>
-//     </center>
-//   );
-// }
+import React from "react";
+import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// function App() {
-//   return (
-//     <div>
-//       <center>
-//         <h1 style={{ color: "red" }}>Time-Table</h1>
-//       </center>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import Display from "./ReactAssignments/ReactAssignmentsDisplay/display";
+// Dynamic Routing
+import Home from "./FunctionalComponents/Dynamic Routing/Home";
+import MoviesList from "./FunctionalComponents/Dynamic Routing/MoviesList";
+import MoviesDetails from "./FunctionalComponents/Dynamic Routing/MoviesDetails";
 
 function App() {
   return (
     <div>
-      <Display />
+      <Router>
+        <div style={{display:'flex',justifyContent:"space-around"}}>
+        <Link to="/Home">Home</Link>
+        <Link to="/MoviesList">Movies</Link>
+        </div>
+
+        <Routes>
+          <Route path="/Home" element={<Home />}></Route>
+          <Route path="/MoviesList" element={<MoviesList />}></Route>
+          <Route path="/MoviesList/:id" element={<MoviesDetails/>}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+// import Display from "./ReactAssignments/ReactAssignmentsDisplay/display";
+
+// function App() {
+//   return (
+//     <div>
+//       <Display />
+//     </div>
+//   );
+// }
+
+// export default App;

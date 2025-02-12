@@ -20,25 +20,27 @@
 
 // export default CondRend;
 
-function CondRend()
-{
-    const user="Admin"
-    if(user==="Admin")
-    {
-        return(
-            <div>
-                <h1>Welcome Admin</h1>
-            </div>
-        )
-    }
-    else
-    {
-        return(
-            <div>
-                <h1>Welcome User</h1>
-            </div>
-        )
-    }
-}
+// function CondRend()
+// {
+//     const user="Admin"
+//     if(user==="Admin")
+//     {
+//         return(
+//             <div>
+//                 <h1>Welcome Admin</h1>
+//             </div>
+//         )
+//     }
+//     else
+//     {
+//         return(
+//             <div>
+//                 <h1>Welcome User</h1>
+//             </div>
+//         )
+//     }
+// }
 
-export default CondRend;
+// export default CondRend;
+
+

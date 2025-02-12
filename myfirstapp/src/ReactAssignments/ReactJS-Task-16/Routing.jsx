@@ -20,7 +20,9 @@ function Routing() {
   return (
     <div>
       <BrowserRouter>
+      
         <div style={{display: "flex", justifyContent: "space-evenly", backgroundColor: "orange", padding: "20px",marginBottom:"15px"}}>
+
           <Link to="/task-1">Task-1</Link>
           <Link to="/task-2">Task-2</Link>
           <Link to="/task-3">Task-3</Link>
@@ -55,6 +57,7 @@ function Routing() {
             <Route path="/task-14" element={<FormComponent />}></Route>
             <Route path="/task-15" element={<LoginForm />}></Route>
         </Routes>
+
       </BrowserRouter>
     </div>
   );
